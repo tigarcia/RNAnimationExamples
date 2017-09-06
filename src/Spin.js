@@ -27,7 +27,10 @@ export default class Spin extends Component {
         duration: 8000,
         easing: Easing.linear
       }
-    ).start(() => null);
+    ).start(() => {
+      console.warn("Done with a rotation");
+      this.spin()
+    });
   }
 
   render() {
